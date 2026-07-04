@@ -1,0 +1,28 @@
+[advisories]
+db-path = "~/.cargo/advisory-db"
+db-urls = ["https://github.com/rustsec/advisory-db"]
+yanked = "warn"
+ignore = [
+    # mach is macOS-only (pulled in via region -> retour) and never
+    # compiled for our Windows/Linux targets. No safe upgrade exists
+    # upstream; mach2 is a fork but retour/region haven't migrated.
+    "RUSTSEC-2020-0168",
+]
+
+[licenses]
+allow = [
+    "Apache-2.0",
+    "BSD-2-Clause",
+    "ISC",
+    "MIT",
+	"Unicode-3.0",
+]
+
+[bans]
+multiple-versions = "allow"
+wildcards = "allow"
+highlight = "all"
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"

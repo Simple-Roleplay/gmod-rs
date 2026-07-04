@@ -1,4 +1,5 @@
 [workspace]
+resolver = "3"
 members = [
 	"gmod",
 	"gmod-macros"
@@ -7,3 +8,6 @@ exclude = [
 	"examples/my-first-binary-module",
 	"examples/printing-to-console"
 ]
+
+[workspace.package]
+edition = "2024"
