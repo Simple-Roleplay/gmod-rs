@@ -23,7 +23,8 @@ mod haxports {
 	compile_error!("Sigscanning is currently not supported on MacOS, please disable the `hax` feature on gmod-rs using `default-features = false` to make a normal module");
 
 	pub use retour as detour;
-	pub use ctor::{ctor as dllopen, dtor as dllclose};
+	pub use ctor::ctor as dllopen;
+	pub use dtor::dtor as dllclose;
 
 	pub use fn_type_alias::*;
 	pub use fn_abi::*;
